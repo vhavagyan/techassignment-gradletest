@@ -1,1 +1,1 @@
-# techassignment-gradletest
+# gradleTest
