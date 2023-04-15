@@ -22,7 +22,7 @@ jobs:
       run: docker build -t $IMAGE_NAME:latest .
 
     - name: GCloud setup
-      uses: google-github-actions/setup-gcloud@master
+      uses: google-github-actions/setup-gcloud@main
       with:
         service_account_key: ${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}
         project_id: ${{ vars.GCP_PROJECT_ID }}
