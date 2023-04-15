@@ -8,3 +8,9 @@ Github Actions Wrokflow:
     Builds docker image on push event to the master/main branch.
     Pushes to docker image repository.
     Deploys the docker image to the cluster.
+
+
+VARIABLES AND SECRETS:
+    GCP_PROJECT_ID - Google Cloud Platform project ID
+    DOCKER_IMAGE_NAME - image name to build
+
