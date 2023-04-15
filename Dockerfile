@@ -10,7 +10,6 @@ FROM openjdk:17-jdk-slim-buster
 
 RUN mkdir /app
 
-ARG JAR_FILE=/opt/build/libs/*.jar
-COPY --from=build ${JAR_FILE} /app/spring-boot-application.jar
+COPY --from=build /opt/build/libs/spring-boot-application.jar /app/spring-boot-application.jar
 
 ENTRYPOINT ["java",  "-XX:InitialRAMPercentage=40.0", "-XX:MaxRAMPercentage=75.0", "-jar", "/app/spring-boot-application.jar"]
