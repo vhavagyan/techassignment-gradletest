@@ -36,6 +36,6 @@ jobs:
     - name: Push Docker Image to Container Registry
       run: |
         docker tag $IMAGE_NAME:latest gcr.io/$PROJECT_ID/$IMAGE_NAME:latest
-        docker tag $IMAGE_NAME:latest gcr.io/$PROJECT_ID/$IMAGE_NAME:v$WORKFLOW_RUN_NUMBER
+        docker tag $IMAGE_NAME:latest gcr.io/$PROJECT_ID/$IMAGE_NAME:v0.1.$WORKFLOW_RUN_NUMBER
         docker push gcr.io/$PROJECT_ID/$IMAGE_NAME:latest
-        docker push gcr.io/$PROJECT_ID/$IMAGE_NAME:v$WORKFLOW_RUN_NUMBER
+        docker push gcr.io/$PROJECT_ID/$IMAGE_NAME:v0.1.$WORKFLOW_RUN_NUMBER
