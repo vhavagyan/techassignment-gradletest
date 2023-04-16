@@ -4,7 +4,7 @@ Containerized Java Spring Boot application that has a GET endpoint http://localh
 There is a health check endpoint as well (GET http://localhost:8998/health) that returns status code 200 when healthy.
 The app runs on 8998 port.
 
-## Github Actions Wrokflow:
+## Github Actions Workflow:
 * Builds docker image on push event to the master/main branch.
 * Pushes to docker image repository.
 * Deploys the docker image to the cluster.
