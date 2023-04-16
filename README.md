@@ -14,3 +14,4 @@ The app runs on 8998 port.
 * GCP_PROJECT_ID - Google Cloud Platform project ID
 * DOCKER_IMAGE_NAME - image name to build
 * GCP_SERVICE_ACCOUNT_KEY - GCP Service account key
+* GKE_CLUSTER_NAME - Google Kubernetes cluster name

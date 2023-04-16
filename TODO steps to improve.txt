@@ -2,4 +2,4 @@ docker image versioning (take from git tags or project)
 git actions: use gcloud instead of reusable workflows
 replace GCR with Artifact Registry
 use IaaC
-create GKE standart instead of Autopilot
+
