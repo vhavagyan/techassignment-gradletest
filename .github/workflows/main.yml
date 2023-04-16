@@ -23,12 +23,15 @@ jobs:
     - name: Build Docker Image
       run: docker build -t $IMAGE_NAME:latest .
 
-    - name: GCloud setup
-      uses: google-github-actions/setup-gcloud@main
+    - name: GCloud Authentication
+      uses: google-github-actions/auth@v1
       with:
-        service_account_key: ${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}
+        credentials_json: ${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}
+
+    - name: GCloud setup
+      uses: google-github-actions/setup-gcloud@v1
+      with:
         project_id: ${{ vars.GCP_PROJECT_ID }}
-        export_default_credentials: true
 
     - name: Configure Docker Client
       run: gcloud auth configure-docker --quiet
