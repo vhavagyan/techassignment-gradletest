@@ -13,4 +13,4 @@ Github Actions Wrokflow:
 VARIABLES AND SECRETS:
     GCP_PROJECT_ID - Google Cloud Platform project ID
     DOCKER_IMAGE_NAME - image name to build
-
+    GCP_SERVICE_ACCOUNT_KEY - GCP Service account key
