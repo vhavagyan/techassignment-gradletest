@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Deployment
+metadata:
+  name: gradle-test
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: gradle-test
+  template:
+    metadata:
+      labels:
+        app: gradle-test
+    spec:
+      containers:
+      - name: gradle-test
+        image: VAR_IMAGE_NAME
