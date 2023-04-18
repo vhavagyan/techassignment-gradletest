@@ -4,4 +4,5 @@ replace GCR with Artifact Registry
 use IaaC
 configure IAM to storage specific object (object) admin with condition (//storage.googleapis.com/projects/_/buckets/artifacts.techassignment-dev-gradletest.appspot.com)
 configure IAM to specific cluster (//container.googleapis.com/projects/PROJECT_ID/clusters/CLUSTER_ID)
-
+update image in kube with kubectl set image 
+read app port from application.properties file (for yaml)

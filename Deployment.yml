@@ -1,7 +1,9 @@
-apiVersion: v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: gradle-test
+  name: gradle-test-dpl
+  labels:
+    app: gradle-test
 spec:
   replicas: 2
   selector:
@@ -13,5 +15,14 @@ spec:
         app: gradle-test
     spec:
       containers:
-      - name: gradle-test
+      - name: gradle-test-app
         image: VAR_IMAGE_NAME
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 18998
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 18998
+          initialDelaySeconds: 10
+          periodSeconds: 10

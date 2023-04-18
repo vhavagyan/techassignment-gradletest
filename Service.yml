@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: gradle-test-svc
+spec:
+  type: LoadBalancer
+  selector:
+    app: gradle-test
+  ports:
+  - port: 80
+    targetPort: 18998
