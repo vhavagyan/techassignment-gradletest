@@ -27,12 +27,3 @@ dependencies {
 test {
 	useJUnitPlatform()
 }
-
-jar{
-	archiveName 'spring-boot-application.jar'
-	manifest {
-		attributes(
-				'Main-Class': 'ai.podcastle.gradleTest.GradleTestApplication'
-		)
-	}
-}
