@@ -21,8 +21,10 @@ spec:
         ports:
         - containerPort: 18998
         resources:
+          requests:
+            cpu: 100m
           limits:
-            cpu: 100
+            cpu: 10
         livenessProbe:
           httpGet:
             path: /health
