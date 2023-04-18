@@ -59,8 +59,12 @@ jobs:
     - name: Create service
       run: kubectl apply -f $GITHUB_WORKSPACE/Service.yml
     
+    - name: Create Horizontal Pod Autoscaler
+      run: kubectl apply -f $GITHUB_WORKSPACE/HPA.yml
+
     - name: Rollout deployment
-      run: kubectl rollout restart deployment
+      #run: kubectl rollout restart deployment --selector=app=gradle-test
+      run: kubectl rollout restart -f $GITHUB_WORKSPACE/Deployment.yml
 
     - name: test
       run: |-
