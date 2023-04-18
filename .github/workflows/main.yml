@@ -58,6 +58,9 @@ jobs:
 
     - name: Create service
       run: kubectl apply -f $GITHUB_WORKSPACE/Service.yml
+    
+    - name: Rollout deployment
+      run: kubectl rollout restart deployment
 
     - name: test
       run: |-

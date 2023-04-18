@@ -32,7 +32,7 @@ jar{
 	archiveName 'spring-boot-application.jar'
 	manifest {
 		attributes(
-				'Main-Class': 'ai.podcastle.GradleTestApplication'
+				'Main-Class': 'ai.podcastle.gradleTest.GradleTestApplication'
 		)
 	}
 }
